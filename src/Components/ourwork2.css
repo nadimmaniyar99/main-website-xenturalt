@@ -1,0 +1,109 @@
+.projects-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.main-heading {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.projects-header {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 1.5rem;
+  
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-type {
+  font-size: 0.85rem;
+  color: #3f51b5;
+  font-weight: 600;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.project-button {
+  margin-top: auto;
+  align-self: start;
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.project-button:hover {
+  background-color: #3b82f6;
+}
+
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pagination button {
+  padding: 0.6rem 1.2rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin: 20px 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #2c387e;
+}

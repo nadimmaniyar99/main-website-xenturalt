@@ -1,0 +1,130 @@
+.container {
+  margin: auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 50px;
+  animation: slideUp 0.8s ease-in-out;
+  box-sizing: border-box;
+}
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* align to top */
+  min-height: 100vh;
+  padding-top: 80px; /* Top padding for space */
+  background-color: #f9fafb; /* Optional background */
+  box-sizing: border-box;
+}
+
+
+
+.emoji {
+  font-size: 60px;
+  animation: bounce 1.5s infinite;
+  margin-bottom: 10px;
+}
+
+.container > h1 {
+  color: #ef4444; /* Tailwind Red-500 */
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.container > p {
+  color: #4b5563; /* Tailwind Gray-600 */
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  font-size: 15px;
+  color: #374151; /* Tailwind Gray-700 */
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #2563eb; /* Tailwind Blue-600 */
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  margin: 12px 0 24px;
+}
+
+.social-links a {
+  margin: 0 8px;
+  color: #1f2937; /* Tailwind Gray-800 */
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #10b981; /* Tailwind Green-500 */
+}
+
+.home-btn {
+  background-color: #10b981; /* Tailwind Green-500 */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.home-btn:hover {
+  background-color: #059669; /* Tailwind Green-600 */
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container > h1 {
+    font-size: 24px;
+  }
+
+  .emoji {
+    font-size: 42px;
+  }
+
+  .home-btn {
+    width: 100%;
+    padding: 14px 0;
+  }
+}

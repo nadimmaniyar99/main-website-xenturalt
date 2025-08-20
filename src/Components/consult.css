@@ -1,0 +1,108 @@
+/* ConsultationForm.css */
+
+
+
+.form-container {
+  background-color: white;
+  padding: 20px; /* Reduced padding for a more compact look */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Maximum width of the form */
+  width: 100%; /* Allows it to be responsive below max-width */
+  box-sizing: border-box; /* Includes padding in the element's total width and height */
+  /* 'margin: auto;' is no longer needed as flexbox handles centering */
+}
+
+.form-group {
+  margin-bottom: 10px; /* Reduced margin for a more compact look */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="datetime-local"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px; /* Reduced min-height for a more compact look */
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end; /* Aligns buttons to the right */
+  margin-top: 20px; /* Reduced margin for a more compact look */
+  gap: 10px; /* Space between buttons */
+}
+
+.form-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.form-actions button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+.form-actions button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.form-actions button[type="button"], /* Applies to the Cancel button */
+.form-actions button[type="reset"] {
+  background-color: #6c757d;
+  color: white;
+}
+
+.form-actions button[type="button"]:hover,
+.form-actions button[type="reset"]:hover {
+  background-color: #5a6268;
+}
+
+.form-actions button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  color: #666666;
+}
+
+h2 {
+  /* text-align: center; */
+  color: #333;
+  margin-bottom: 20px; /* Reduced margin for a more compact look */
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.success-message {
+  color: green;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}

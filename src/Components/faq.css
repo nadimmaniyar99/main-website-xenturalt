@@ -1,0 +1,100 @@
+.faq-container {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'lato';
+}
+
+.faq-header h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+.highlight {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.faq-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.faq-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.faq-left h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.faq-left p {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.explore-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #0056b3;
+}
+
+.faq-right1 {
+  flex: 1;
+  min-width: 300px;
+}
+
+.faq-right1 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.faq-item {
+  background: #f7f9fc;
+  padding: 16px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.faq-item:hover {
+  background-color: #eef4ff;
+}
+
+.faq-question {
+  font-weight: 600;
+  color: #222;
+  position: relative;
+}
+
+.toggle-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.2rem;
+  color: rgb(255, 21, 0);
+}
+
+.faq-answer {
+  margin-top: 12px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

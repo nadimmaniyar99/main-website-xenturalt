@@ -1,0 +1,107 @@
+.digital-process-section {
+  padding: 60px 20px;
+  background: #fafafa;
+  font-family: sans-serif;
+  border: 1px solid #e5e7eb;
+}
+
+.process-container {
+    border: .5px solid rgb(226, 222, 222);
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 0 auto;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.process-text {
+  flex: 1 1 500px;
+  margin-left: 30px;
+}
+
+.process-text h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.process-text h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #3b82f6, #00c3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.process-text p {
+  color: #333;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.process-steps {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+}
+
+.step-number {
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 50%;
+  padding: 12px 18px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.step-details h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.step-details p {
+  margin-top: 5px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Step circle colors */
+.step-number.blue {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.step-number.green {
+  background-color: #d1fae5;
+  color: #10b981;
+}
+
+.step-number.orange {
+  background-color: #fef3c7;
+  color: #f59e0b;
+}
+
+.step-number.purple {
+  background-color: #ede9fe;
+  color: #8b5cf6;
+}

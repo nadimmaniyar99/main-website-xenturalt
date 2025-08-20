@@ -1,0 +1,154 @@
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  /* max-width: 600px; */
+  padding: 20px;
+}
+
+.tagline {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.line {
+  width: 40px;
+  height: 2px;
+  background-color: #000;
+  margin-right: 10px;
+}
+
+.hero-text h1 {
+ margin: 0;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 116%;
+    letter-spacing: 1%;
+    background: linear-gradient(90deg, #3B82F6 0%, #232323 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-text .blue {
+  color: #2563eb;
+}
+
+.description {
+  margin: 20px 0;
+  color: #374151;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.quote-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero-images {
+  flex: 1 1 500px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top-images {
+  display: flex;
+  gap: 20px;
+}
+
+.image-card img,
+.bottom-image img {
+  /* width: 100%; */
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.image-card {
+  flex: 1;
+}
+
+.bottom-image {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .quote-btn {
+    width: 100%;
+  }
+
+  .top-images {
+    flex-direction: column;
+  }
+
+  .hero-images {
+    align-items: center;
+  }
+}
+
+/* MOBILE STYLES (480px and below) */
+@media (max-width: 320px) {
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .tagline {
+    justify-content: center;
+  }
+
+  .line {
+    margin-right: 8px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .quote-btn {
+    padding: 10px 18px;
+    font-size: 15px;
+  }
+
+  .hero-section {
+    padding: 40px 10px;
+  }
+
+  .top-images {
+    gap: 16px;
+  }
+
+  .hero-images {
+    gap: 16px;
+  }
+}

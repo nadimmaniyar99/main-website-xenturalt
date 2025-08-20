@@ -1,0 +1,706 @@
+
+
+ /* Universal Styles */
+/* * {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+} */
+
+.containerr {
+
+    /* margin-top: 100px; */
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px; /* Consistent padding for all screen sizes */
+}
+
+/* Header Section */
+.header {
+  background: linear-gradient(90deg, #3B82F6 0%, #232323 100%);
+  color: white;
+  text-align: center;
+  padding: 40px 20px; /* Adjusted padding for better default */
+}
+
+.header h1 {
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* Introduction Section */
+.intro-section {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.intro-section h2 {
+  color: #3B82F6;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/* Cards Container */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Individual Card */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #3B82F6;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card .info {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #3B82F6;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #2a6edc; /* Darker shade on hover */
+}
+
+/* --- Modal Styles (Main Popup) --- */
+.modal {
+  display: none; /* Controlled by JavaScript */
+  position: fixed;
+  z-index: 999; /* Ensure it's on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Allows scrolling if content is too long */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex; /* Use flexbox for centering */
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* Padding around the modal content */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 0; /* Remove margin auto to use flexbox centering */
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%; /* Responsive width */
+  max-width: 600px; /* Maximum width for larger screens */
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  max-height: 95vh; /* Limit height to viewport height */
+  overflow-y: auto; /* Enable scrolling within modal if content overflows */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #333;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px; /* Increase clickable area for touch */
+}
+
+.close:hover {
+  color: #000;
+}
+
+.modal-content h3 {
+  color: #3B82F6;
+  margin-bottom: 10px;
+  /* text-align: center; */
+  font-size: 22px;
+}
+
+.modal-content p {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+/* Form Styles within Modal */
+form {
+  display: flex;
+  flex-direction: column; /* Stack form elements vertically */
+  gap: 10px; /* Spacing between form elements */
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 0; /* Reset margin as gap handles spacing */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+form input[type="file"] {
+  border: none; /* File input typically doesn't need a border */
+  padding: 10px 0;
+}
+
+form button {
+  background-color: #3B82F6;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 16px;
+  margin-top: 10px; /* Spacing above the submit button */
+}
+
+form button:hover {
+  background-color: #2a6edc;
+}
+
+/* --- Popup Styles (Assuming this is your "Apply Form" or similar) --- */
+.popup-button {
+  padding: 1rem 2rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-button:hover {
+  background-color: #1e40af;
+}
+
+.popup-overlay {
+  display: none; /* Controlled by JavaScript */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 10px; /* Padding around the popup content */
+}
+
+.popup-content {
+  background: white;
+  padding: 1.5rem; /* Increased default padding for better appearance */
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 90%; /* Responsive width */
+  position: relative;
+  max-height: 95vh; /* Limit height to viewport height */
+  overflow-y: auto; /* Enable scrolling within popup if content overflows */
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  padding: 5px; /* Increase clickable area */
+}
+
+.popup-close:hover {
+  color: #000;
+}
+
+.popup-content h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.popup-form {
+  display: flex;
+  flex-wrap: wrap; /* Allow form groups to wrap */
+  gap: 1rem; /* Spacing between form groups */
+}
+
+.popup-group {
+  flex: 1 1 calc(50% - 0.5rem); /* Two columns, accounting for gap */
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-group.full {
+  flex: 1 1 100%; /* Full width for single column fields */
+}
+
+.popup-group label {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.popup-group input,
+.popup-group select,
+.popup-group textarea { /* Added textarea here for consistency */
+  padding: 0.75rem; /* More padding for better touch targets */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%; /* Ensure inputs take full width of their group */
+}
+
+.popup-submit {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-submit:hover {
+  background-color: #1e40af;
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Laptops and larger tablets (992px - 1199px) */
+@media (max-width: 1199px) {
+  .container {
+    padding: 18px;
+  }
+}
+
+/* Medium devices (tablets, 768px - 991px) */
+@media (max-width: 991px) {
+  .container {
+    padding: 15px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+  }
+  .header p {
+    font-size: 17px;
+  }
+
+  .intro-section {
+    padding: 25px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+
+  .intro-section h2 {
+    font-size: 24px;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card .info {
+    font-size: 13px;
+  }
+
+  .btn {
+    padding: 9px 15px;
+    font-size: 13px;
+  }
+
+  /* Modal Specifics */
+  .modal-content {
+    max-width: 500px;
+    padding: 25px;
+  }
+
+  .modal-content h3 {
+    font-size: 20px;
+  }
+
+  .modal-content p {
+    font-size: 14px;
+  }
+
+  form input,
+  form textarea {
+    padding: 11px;
+  }
+
+  form button {
+    padding: 11px 18px;
+    font-size: 15px;
+  }
+
+  /* Popup Specifics */
+  .popup-content {
+    padding: 1.2rem;
+  }
+
+  .popup-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .popup-group {
+    flex: 1 1 calc(50% - 0.5rem); /* Maintain two columns if possible */
+  }
+
+  .popup-group input,
+  .popup-group select,
+  .popup-group textarea {
+    padding: 0.65rem;
+    font-size: 0.95rem;
+  }
+
+  .popup-submit {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Small devices (large phones and small tablets, 576px - 767px) */
+@media (max-width: 767px) {
+  .header {
+    padding: 30px 15px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+  .header p {
+    font-size: 16px;
+  }
+
+  .intro-section {
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+
+  .intro-section h2 {
+    font-size: 20px;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 17px;
+  }
+
+  /* Modal Specifics */
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .modal-content h3 {
+    font-size: 18px;
+  }
+
+  .modal-content p {
+    font-size: 13px;
+  }
+
+  form input,
+  form textarea {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  form button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  /* Popup Specifics */
+  .popup-content {
+    padding: 1rem;
+  }
+
+  .popup-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .popup-form {
+    flex-direction: column; /* Stack form groups vertically */
+    gap: 0.75rem; /* Smaller gap when stacked */
+  }
+
+  .popup-group {
+    flex: 1 1 100%; /* Each group takes full width */
+  }
+
+  .popup-group label {
+    margin-bottom: 0.3rem; /* Reduce label margin */
+  }
+
+  .popup-group input,
+  .popup-group select,
+  .popup-group textarea {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .popup-submit {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+  .container {
+    padding: 10px;
+  }
+
+  .header {
+    padding: 25px 10px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+  .header p {
+    font-size: 15px;
+  }
+
+  .intro-section {
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .intro-section h2 {
+    font-size: 18px;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr; /* Single column layout for cards */
+    gap: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card .info {
+    font-size: 13px;
+  }
+
+  .btn {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  /* Modal Specifics */
+  .modal-content {
+    padding: 15px;
+  }
+
+  .close {
+    font-size: 20px;
+    right: 10px;
+    top: 5px;
+  }
+
+  .modal-content h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .modal-content p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  form input,
+  form textarea {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  form button {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  /* Popup Specifics */
+  .popup-content {
+    padding: 0.75rem;
+  }
+
+  .popup-close {
+    font-size: 1.1rem;
+    right: 10px;
+    top: 8px;
+  }
+
+  .popup-content h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .popup-form {
+    gap: 0.5rem;
+  }
+
+  .popup-group label {
+    font-size: 0.8rem;
+  }
+
+  .popup-group input,
+  .popup-group select,
+  .popup-group textarea {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .popup-submit {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Tiny devices (e.g., iPhone 5/SE, less than 375px) */
+@media (max-width: 374px) {
+  .header h1 {
+    font-size: 20px;
+  }
+  .header p {
+    font-size: 14px;
+  }
+
+  .intro-section h2 {
+    font-size: 16px;
+  }
+
+  .card h3 {
+    font-size: 15px;
+  }
+
+  .card .info {
+    font-size: 12px;
+  }
+
+  /* Modal Specifics */
+  .modal-content {
+    padding: 10px;
+  }
+
+  .modal-content h3 {
+    font-size: 14px;
+  }
+
+  /* Popup Specifics */
+  .popup-content {
+    padding: 0.5rem;
+  }
+
+  .popup-close {
+    font-size: 1rem;
+    right: 8px;
+    top: 5px;
+  }
+
+  .popup-content h2 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .popup-group label {
+    font-size: 0.75rem;
+  }
+
+  .popup-group input,
+  .popup-group select,
+  .popup-group textarea {
+    padding: 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  .popup-submit {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+  

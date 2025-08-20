@@ -1,0 +1,151 @@
+/* Container and section layout */
+.technologies-section {
+  background: linear-gradient(to bottom, #f0f5ff, #ffffff);
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.technologies-section .container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Section label */
+.label {
+  display: inline-block;
+  background: #fef6f2;
+  color: #ff6f2c;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Main heading */
+.main-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.highlight-blue {
+  color: #1da1f2;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background-color: #ff6f2c;
+  margin: 30px auto;
+  border: none;
+  border-radius: 2px;
+}
+
+/* Tabs styling */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  position: relative;
+  padding: 12px 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+.tab:hover {
+  color: #ff6f2c;
+}
+
+.tab.active {
+  color: #000;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #ff6f2c;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Tech content area */
+.tab-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.tech-item {
+  background-color: #fff;
+  padding: 20px 15px;
+  width: 120px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.tech-item:hover {
+  transform: translateY(-6px);
+}
+
+.tech-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.tech-item p {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  color: #111;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 26px;
+  }
+
+  .tabs {
+    gap: 20px;
+  }
+
+  .tech-item {
+    width: 100px;
+    padding: 15px 10px;
+  }
+
+  .tech-item img {
+    width: 50px;
+    height: 50px;
+  }
+}

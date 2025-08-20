@@ -1,0 +1,197 @@
+/* PrivacyPolicy.css */
+
+
+
+/* Main Container for the Privacy Policy Content */
+.privacy-policy-container {
+  /* max-width: 850px; Optimal width for comfortable reading */
+  width: 100%; /* Ensures responsiveness on smaller screens */
+  margin: 60px 20px; /* Top/bottom margin, with side padding for smaller viewports */
+  padding: 40px; /* Ample internal padding */
+  background-color: #F8F8F8; /* Clean white content background */
+  border-radius: 15px; /* Soft, modern rounded corners */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Subtle, floating effect */
+  box-sizing: border-box; /* Include padding in element's total width/height */
+  overflow: hidden; /* Prevents overflow issues with rounded corners */
+  
+  /* If content is too long for screen, allow scrolling within the container */
+  /* You might consider 'max-height' here if you want a fixed-height scrollable area */
+  /* max-height: 90vh; */
+  /* overflow-y: auto; */
+}
+
+/* Headings Styling */
+.privacy-policy-container h1 {
+  font-family: 'Montserrat', sans-serif; /* A distinct, modern font for main headings */
+  font-weight: 700; /* Bold weight for prominence */
+  font-size: 3em; /* Large size for the main title */
+  color: #1a202c; /* Dark, strong color for main title */
+  text-align: center;
+  margin-bottom: 30px; /* Space below the main title */
+  position: relative; /* For the custom underline */
+  padding-bottom: 20px; /* Space between text and underline */
+}
+
+.privacy-policy-container h1::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100px; /* A concise underline for the main title */
+  height: 5px; /* Thicker underline */
+  background-color: #007bff; /* Primary accent color */
+  border-radius: 3px;
+}
+
+.privacy-policy-container h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 2.2em;
+  color: black; /* Slightly lighter than h1 for secondary titles */
+  margin-top: 50px; /* More vertical space to separate sections */
+  margin-bottom: 20px; /* Space below h2 headings */
+  border-bottom: 2px solid #e2e8f0; /* Soft, full-width separator line */
+  padding-bottom: 12px; /* Space between heading text and the line */
+}
+
+.privacy-policy-container h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.6em;
+  color: black; /* Even lighter for sub-headings */
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+/* Paragraphs */
+.privacy-policy-container p {
+  margin-bottom: 1em; /* Consistent spacing between paragraphs */
+  font-size: 1.05em; /* Slightly larger base text for readability */
+  line-height: 1.8; /* Generous line height for long-form text */
+}
+
+/* Strong/Bold text for emphasis */
+.privacy-policy-container p strong,
+.privacy-policy-container li strong {
+  color: #0056b3; /* A strong, clear accent for important terms */
+  font-weight: 700; /* Ensure it stands out */
+}
+
+/* Unordered lists */
+.privacy-policy-container ul {
+  list-style-type: disc; /* Standard disc bullets */
+  margin: 1.5em 0; /* Vertical spacing for lists */
+  padding-left: 30px; /* Indentation for bullet points */
+}
+
+.privacy-policy-container ul li {
+  margin-bottom: 0.8em; /* Spacing between list items */
+  font-size: 1.05em;
+}
+
+/* Links */
+.privacy-policy-container a {
+  color: #007bff; /* Standard link blue */
+  text-decoration: none; /* No underline by default */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transitions */
+}
+
+.privacy-policy-container a:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline; /* Underline on hover for clear interaction */
+}
+
+/* Specific styling for the "Last updated" paragraph */
+.privacy-policy-container p:first-of-type {
+  text-align: center;
+  font-size: 0.95em;
+  color: black;
+  margin-top: -15px; /* Pull it slightly closer to the title */
+  margin-bottom: 30px; /* Provide more space below it */
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .privacy-policy-container {
+    margin: 40px 15px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .privacy-policy-container {
+    margin: 30px 15px;
+    padding: 25px;
+    border-radius: 10px;
+  }
+
+  .privacy-policy-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+  }
+
+  .privacy-policy-container h1::after {
+    width: 80px;
+    height: 4px;
+  }
+
+  .privacy-policy-container h2 {
+    font-size: 1.8em;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+  }
+
+  .privacy-policy-container h3 {
+    font-size: 1.4em;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .privacy-policy-container p,
+  .privacy-policy-container ul li {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-policy-container {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  .privacy-policy-container h1 {
+    font-size: 2em;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .privacy-policy-container h1::after {
+    width: 60px;
+    height: 3px;
+  }
+
+  .privacy-policy-container h2 {
+    font-size: 1.6em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .privacy-policy-container h3 {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+  .privacy-policy-container p,
+  .privacy-policy-container ul li {
+    font-size: 0.95em;
+    line-height: 1.6;
+  }
+
+  .privacy-policy-container ul {
+    padding-left: 20px;
+  }
+}

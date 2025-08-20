@@ -1,0 +1,837 @@
+ /* Reset and base styles */
+ /* Universal Styles */
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'lato', sans-serif; /* Added a fallback font */
+/* }
+
+body {
+  background: #f9faff;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+  scroll-behavior: smooth;
+} */ */
+
+/* Highlight spans */
+.highlight {
+  color: #2567ff;
+  font-weight: 700;
+}
+
+/* --- About Section --- */
+.about-section1 {
+  max-width: 1200px;
+  margin: 50px auto 80px;
+  padding: 0 20px;
+}
+
+/* This rule seems to target a general .about-section, but then you have .about-section1 and another .about-section below.
+   Ensure consistency in your HTML classes. Assuming this targets the general About page title. */
+.about-section .content h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  /* font-weight: 900; */
+  /* text-transform: uppercase; */
+  color: #111;
+}
+
+/* --- Vision Section Layout --- */
+.vision-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+   /* Allows items to wrap to the next line on smaller screens */
+  margin-bottom: 60px;
+  padding: 0 20px; /* Add padding for smaller screens */
+  max-width: 1200px; /* Max width for consistency */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vision-section .text {
+  flex: 1 1 450px;
+  color: black;
+}
+
+.vision-section .text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.vision-section .text p {
+  margin-bottom: 18px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.vision-section .image {
+  flex: 1 1 450px;
+  text-align: center;
+}
+
+.vision-section .image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 12px 28px rgb(37 103 255 / 0.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.vision-section .image img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Team Section --- */
+.Team {
+  background: #fff;
+  padding: 60px 20px 80px;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgb(37 103 255 / 0.1);
+}
+
+.Team h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.Team h1 span {
+  color: #2567ff;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  padding: 0 10px; /* Add padding to prevent buttons from touching edges on small screens */
+}
+
+.filter-btn {
+  background: #e2e8ff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #2567ff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgb(37 103 255 / 0.15);
+  user-select: none;
+  font-size: 0.95rem; /* Slightly adjust font size for consistency */
+}
+
+.filter-btn:hover {
+  background: #2567ff;
+  color: white;
+  box-shadow: 0 8px 15px rgb(37 103 255 / 0.4);
+}
+
+.filter-btn.active {
+  background: #2567ff;
+  color: white;
+  box-shadow: 0 8px 20px rgb(37 103 255 / 0.5);
+}
+
+/* Team Cards */
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 0 20px; /* Ensure padding for team cards */
+}
+
+.team-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgb(37 103 255 / 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgb(37 103 255 / 0.25);
+}
+
+.team-card img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #2567ff;
+  transition: border-color 0.3s ease;
+}
+
+.team-card:hover img {
+  border-color: #4a85ff;
+}
+
+.team-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.team-card p {
+  color: #666;
+  font-weight: 600;
+}
+
+/* --- Stats Section --- */
+.stats-section1 {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background: #f7f9fc;
+  padding: 40px 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Allow stats to wrap on smaller screens */
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+  min-width: 120px; /* Ensure a minimum width for stat items */
+}
+
+.stat-item h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #2567ff;
+  margin-bottom: 8px;
+  letter-spacing: -1.5px;
+}
+
+.stat-item h2 span.count {
+  display: inline-block;
+  min-width: 50px;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #444;
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* Animate counting number color change */
+.count {
+  transition: color 0.4s ease;
+}
+
+/* --- General About Section (assuming this is separate from about-section1) --- */
+.about-section {
+  background-color: #f5f9fc;
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.about-left, .about-right {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.about-left p {
+  font-size: 40px;
+  line-height: 1.6;
+}
+
+.about-right p {
+  font-size: 30px;
+  line-height: 1.8;
+  color: #444;
+}
+section.about-details-section {
+    display: flex
+;
+    justify-content: center;
+}
+
+
+
+/* --- Awards Section --- */
+.awards-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  background: #f0f4ff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(37, 103, 255, 0.15);
+}
+
+.award-box {
+  flex: 0 0 150px; /* Fixed width, but will adapt via media queries */
+  background: #2567ff;
+  color: white;
+  border-radius: 16px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(37, 103, 255, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.award-box h1 {
+  font-size: 5rem;
+  margin: 0 0 15px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.award-box p {
+  font-size: 1.15rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.award-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.award-item {
+  display: flex;
+  gap: 20px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 3px 15px rgba(37, 103, 255, 0.1);
+  align-items: flex-start;
+  transition: box-shadow 0.3s ease;
+}
+
+.award-item:hover {
+  box-shadow: 0 8px 25px rgba(37, 103, 255, 0.3);
+}
+
+.award-item img {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.award-item h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.3rem;
+  color: #2567ff;
+  font-weight: 700;
+}
+
+.award-item .title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.award-item .subtext {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+  max-width: 600px;
+}
+
+/* --- Brands Section --- */
+.brands-section {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.brands-section img {
+  filter: drop-shadow(0 2px 2px rgb(37 103 255 / 0.3));
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 48px;
+  height: 48px;
+}
+
+.brands-section img:hover {
+  transform: scale(1.2);
+}
+
+/* --- Feedback Section --- */
+.feedback-section {
+  background: white;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 60px 20px;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgb(37 103 255 / 0.15);
+}
+
+.feedback-section h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.feedback-section .highlight {
+  color: #2567ff;
+}
+
+/* Feedback slider */
+.feedback-slider {
+  display: flex;
+  overflow-x: auto; /* Allows horizontal scrolling for cards */
+  gap: 25px;
+  scroll-behavior: smooth;
+  padding-bottom: 15px;
+  -webkit-overflow-scrolling: touch; /* Improves scrolling on iOS devices */
+}
+
+.feedback-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.feedback-slider::-webkit-scrollbar-thumb {
+  background: #2567ff;
+  border-radius: 20px;
+}
+
+.feedback-card {
+  background: #f0f5ff;
+  flex: 0 0 300px; /* Fixed width for cards, allowing them to scroll */
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgb(37 103 255 / 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.feedback-card:hover {
+  box-shadow: 0 18px 40px rgb(37 103 255 / 0.3);
+}
+
+.feedback-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #2567ff;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.feedback-card:hover img {
+  border-color: #4a85ff;
+}
+
+.feedback-card h2 {
+  font-weight: 800;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  color: #222;
+  text-align: center;
+}
+
+.feedback-card p {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.feedback-card .stars {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  color: #2567ff;
+  font-size: 1.4rem;
+}
+
+.back-button {
+  background-color: #2567ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(37, 103, 255, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 30px; /* spacing below the button */
+  display: block; /* Make it a block element to center with margin auto */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 200px; /* Limit button width */
+}
+
+.back-button:hover {
+  background-color: #184ed9;
+  transform: translateX(-5px);
+}
+
+/* --- Responsive Media Queries --- */
+
+/* Extra large devices (desktops, 1200px and up) */
+/* No specific changes needed here as base styles are for larger screens */
+
+/* Large devices (laptops, 992px and up) */
+@media (max-width: 1199px) {
+  .about-section1,
+  .Team,
+  .about-section,
+  .awards-section,
+  .brands-section,
+  .feedback-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 991px) {
+  .Team h1,
+  .feedback-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .vision-section .text h2 {
+    font-size: 2rem;
+  }
+
+  .awards-section {
+    flex-direction: column;
+    align-items: center; /* Center items when stacked */
+    gap: 40px; /* Adjust gap for column layout */
+  }
+
+  .award-box {
+    flex: none; /* Override flex-grow/shrink */
+    width: 80%; /* Take up more width */
+    max-width: 300px; /* Limit max width */
+    margin-bottom: 20px; /* Spacing between box and details */
+    padding: 30px 20px; /* Adjust padding */
+  }
+
+  .award-box h1 {
+    font-size: 4rem; /* Smaller font for awards */
+  }
+
+  .award-details {
+    width: 100%; /* Take full width */
+  }
+
+  .feedback-slider {
+    padding-left: 20px; /* Ensure cards start from the left on smaller screens */
+    padding-right: 20px;
+  }
+}
+
+/* Small devices (phones, 600px and up) */
+@media (max-width: 767px) {
+  body {
+    font-size: 15px; /* Slightly smaller base font */
+  }
+
+  .about-section .content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  .vision-section {
+    flex-direction: column; /* Stack image and text */
+    gap: 30px;
+  }
+  .vision-section .image,
+  .vision-section .text {
+    flex: unset; /* Reset flex properties */
+    max-width: 100%;
+  }
+
+  .Team h1,
+  .feedback-section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .filter-buttons {
+    gap: 8px; /* Smaller gap for buttons */
+  }
+
+  .filter-btn {
+    padding: 10px 18px; /* Smaller padding for buttons */
+    font-size: 0.9rem;
+  }
+
+  .team-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Allow smaller cards */
+    gap: 20px;
+  }
+
+  .team-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .stats-section {
+    flex-direction: column; /* Stack stats vertically */
+    gap: 20px;
+    padding: 30px 15px;
+  }
+
+  .stat-item h2 {
+    font-size: 3rem; /* Smaller font for stats */
+  }
+
+  .stat-item p {
+    font-size: 1rem;
+  }
+
+  .about-section {
+    flex-direction: column; /* Stack about left and right */
+    gap: 40px;
+    padding: 30px 20px;
+  }
+
+  .about-left p {
+    font-size: 1.4rem; /* Adjust font size */
+    padding-left: 12px; /* Adjust padding */
+  }
+
+  .about-right p {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .awards-section {
+    padding: 20px; /* Adjust padding for the section */
+  }
+
+  .award-box {
+    width: 90%; /* Make award box take up more width */
+  }
+
+  .award-item {
+    flex-direction: column; /* Stack image and text within award item */
+    align-items: center; /* Center content */
+    text-align: center; /* Center text */
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .award-item img {
+    margin-bottom: 5px; /* Add some spacing */
+  }
+
+  .award-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .brands-section {
+    gap: 20px; /* Smaller gap between brands */
+  }
+
+  .brands-section img {
+    width: 40px; /* Slightly smaller brand images */
+    height: 40px;
+  }
+
+  .feedback-section {
+    padding: 40px 15px; /* Adjust feedback section padding */
+  }
+
+  .feedback-card {
+    flex: 0 0 260px; /* Make feedback cards slightly smaller for narrower screens */
+    padding: 20px 15px;
+  }
+
+  .feedback-card img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Extra small devices (portrait phones, 480px and down) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* Even smaller base font for very small screens */
+  }
+
+  .about-section .content h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .vision-section .text h2 {
+    font-size: 1.8rem;
+  }
+
+  .vision-section .text p {
+    font-size: 1rem;
+  }
+
+  .Team h1,
+  .feedback-section h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .filter-buttons {
+    flex-direction: column; /* Stack filter buttons vertically */
+    gap: 10px;
+    align-items: center;
+  }
+
+  .filter-btn {
+    width: 80%; /* Make buttons take more width */
+    max-width: 250px;
+    padding: 12px 20px;
+  }
+
+  .team-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Allow even smaller cards */
+    gap: 15px;
+  }
+
+  .team-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .team-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .stats-section {
+    padding: 25px 10px;
+  }
+
+  .stat-item h2 {
+    font-size: 2.5rem;
+  }
+
+  .stat-item p {
+    font-size: 0.9rem;
+    letter-spacing: 0.8px;
+  }
+
+  .about-left p {
+    font-size: 1.2rem;
+  }
+
+  .about-right p {
+    font-size: 0.95rem;
+  }
+
+  .award-box {
+    width: 95%; /* Almost full width */
+    padding: 25px 15px;
+  }
+
+  .award-box h1 {
+    font-size: 3.5rem;
+  }
+
+  .award-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .award-item .subtext {
+    font-size: 0.85rem;
+  }
+
+  .brands-section img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .feedback-card {
+    flex: 0 0 240px; /* Smallest card size */
+    padding: 15px 10px;
+  }
+
+  .feedback-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .feedback-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .feedback-card p {
+    font-size: 0.9rem;
+  }
+
+  .feedback-card .stars {
+    font-size: 1.2rem;
+  }
+
+  .back-button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Very small devices (under 320px, e.g., old iPhones) */
+@media (max-width: 320px) {
+  body {
+    font-size: 13px;
+  }
+
+  .about-section .content h1 {
+    font-size: 1.8rem;
+  }
+
+  .Team h1,
+  .feedback-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .filter-btn {
+    width: 95%;
+  }
+
+  .team-container {
+    grid-template-columns: minmax(140px, 1fr); /* Single column for very small devices */
+  }
+
+  .feedback-card {
+    flex: 0 0 90%; /* Make feedback cards take up most of the screen width */
+    margin: 0 auto; /* Center them */
+  }
+}
+  

@@ -1,0 +1,218 @@
+/* ========== BASE STYLES ========== */
+.projects-section {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+h1 {
+  color: black;
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+h1 span {
+  color: #3B82F6;
+}
+
+#project-filter {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  background-color: #2b3148;
+  color: white;
+  border: none;
+}
+
+/* ========== GRID ========== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 50px;
+  justify-items: center;
+}
+
+/* ========== CARD STYLES ========== */
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 350px;
+  width: 100%;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.project-button {
+  display: inline-block;
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+  background-color: #1d4ed8;
+}
+
+
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pagination1 button {
+  padding: 0.6rem 1.2rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #2c387e;
+}
+
+.filter-buttons {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  padding: 0.5rem 1.2rem;
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.filter-buttons button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+
+
+/* ========== MEDIA QUERIES ========== */
+
+/* Tablets and small desktops */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .project-card {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .project-card img {
+    height: 160px;
+  }
+
+  #project-filter {
+    font-size: 15px;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .project-desc {
+    font-size: 0.9rem;
+  }
+
+  .pagination1 button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .projects-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-card img {
+    height: 150px;
+  }
+
+  .pagination1 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pagination1 button {
+    width: 100%;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-desc {
+    font-size: 0.85rem;
+  }
+}

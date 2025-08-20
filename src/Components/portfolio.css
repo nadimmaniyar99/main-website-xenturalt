@@ -1,0 +1,160 @@
+.portfolio-section {
+  text-align: center;
+  padding: 60px 20px;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+.portfolio-subtitle {
+  color: #ff6200;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.portfolio-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 40px;
+}
+
+.portfolio-title .highlight {
+  color: #3b82f6;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.portfolio-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-image-bg {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* 👇 Add your actual image URLs here */
+.realestate-bg {
+  background-image: url('/public/images/building.png');
+}
+
+.healthray-bg {
+  background-image: url('/public/images/heart.png');
+}
+
+.bondexch-bg {
+  background-image: url('/public/images/Bond.webp');
+}
+
+.testbook-bg {
+  background-image: url('/public/images/designation.png');
+}
+
+.portfolio-content {
+  padding: 20px;
+  position: relative;
+}
+
+.project-title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.project-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.project-arrow {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 18px;
+  color: #ff6200;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.project-arrow:hover {
+  transform: translateX(3px);
+}
+
+.cta-container {
+  margin: auto;
+  margin-top: 30px;
+}
+
+.connect-button {
+  margin-left: 500px;
+  /* margin: auto; */
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.connect-button:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .portfolio-title {
+    font-size: 26px;
+  }
+
+  .project-title {
+    font-size: 16px;
+  }
+
+  .project-desc {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-title {
+    font-size: 22px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .connect-button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .project-title {
+    font-size: 15px;
+  }
+
+  .project-desc {
+    font-size: 13px;
+  }
+}

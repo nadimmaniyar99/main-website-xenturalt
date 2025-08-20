@@ -1,0 +1,85 @@
+.services-section {
+  font-family: 'lato';
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9fafb;
+}
+
+.services-heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+.services-heading .highlight {
+  color: #0ea5e9;
+  /* border-bottom: 3px solid #f97316; */
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.service-card {
+  width: 260px;
+  background: #f9fcff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  border-bottom: 4px solid #1e90ff;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  /* color: #111827; */
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.explore-link {
+  font-weight: 600;
+  color: #f97316;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.connect-button2 {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.connect-button:hover {
+  background-color: #2563eb;
+}
